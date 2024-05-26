@@ -1,4 +1,5 @@
-import 'package:clean_co/ui_view/before%20login/third%20screen.dart';
+
+import 'package:clean_co/ui_view/on_boarding_view/third%20screen.dart';
 import 'package:flutter/material.dart';
 
 class SecondDemoScreen extends StatelessWidget {
