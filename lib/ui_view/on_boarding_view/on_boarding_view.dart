@@ -1,3 +1,4 @@
+import 'package:clean_co/ui_view/Login/login%20view/login%20screen.dart';
 import 'package:clean_co/ui_view/on_boarding_view/on_boarding_cubit/on_boarding_cubit.dart';
 import 'package:clean_co/ui_view/on_boarding_view/on_boarding_cubit/on_boarding_state.dart';
 import 'package:clean_co/utils/shared_widget/custom_button.dart';
@@ -85,6 +86,7 @@ class OnBoardingView extends StatelessWidget {
                             if(cubit.isLast)
                             {
                               submit();
+                              Navigator.pushReplacementNamed(context, LoginScreen.loginScreenname);
                             }
                             else
                             {
