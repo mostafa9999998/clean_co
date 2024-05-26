@@ -1,9 +1,17 @@
-import 'package:clean_co/ui_view/before%20login/first%20screen.dart';
-import 'package:clean_co/ui_view/before%20login/second%20screen.dart';
-import 'package:clean_co/ui_view/before%20login/third%20screen.dart';
+
+import 'package:bloc/bloc.dart';
+import 'package:clean_co/routes/routes.dart';
+import 'package:clean_co/ui_view/on_boarding_view/first%20screen.dart';
+import 'package:clean_co/ui_view/on_boarding_view/second%20screen.dart';
+import 'package:clean_co/ui_view/on_boarding_view/third%20screen.dart';
+import 'package:clean_co/utils/bloc_observer/bloc_observer.dart';
+import 'package:clean_co/utils/cach_helper/cach_helper.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main()async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await CacheHelper.init();
+  Bloc.observer = MyBlocObserver();
   runApp(const MyApp());
 }
 
@@ -15,12 +23,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
      debugShowCheckedModeBanner: false,
-      routes: {
-        FirstDemoScreen.FirstDemoScreenname : (_) => FirstDemoScreen(),
-        SecondDemoScreen.SecondDemoScreenname : (_) => SecondDemoScreen(),
-        ThirdDemoScreen.ThirdDemoScreenname : (_) => ThirdDemoScreen()
-      },
-      initialRoute: FirstDemoScreen.FirstDemoScreenname,
+      initialRoute: AppRoutes.initialRoute,
+      routes: AppRoutes.appRoutes,
 
     );
   }
