@@ -1,9 +1,7 @@
 
 import 'package:bloc/bloc.dart';
 import 'package:clean_co/routes/routes.dart';
-import 'package:clean_co/ui_view/on_boarding_view/first%20screen.dart';
-import 'package:clean_co/ui_view/on_boarding_view/second%20screen.dart';
-import 'package:clean_co/ui_view/on_boarding_view/third%20screen.dart';
+
 import 'package:clean_co/utils/bloc_observer/bloc_observer.dart';
 import 'package:clean_co/utils/cach_helper/cach_helper.dart';
 import 'package:flutter/material.dart';

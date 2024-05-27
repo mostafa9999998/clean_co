@@ -13,6 +13,7 @@ static const String registerScreenname ='RegisterScreen';
 }
 
 class _RegisterScreenState extends State<RegisterScreen> {
+  TextEditingController nameController = TextEditingController();
   TextEditingController phonecontroller = TextEditingController();
 
   TextEditingController passwordcontroller = TextEditingController();
@@ -113,7 +114,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
                     TextFieldWedget(
                         hint: 'Enter Your Full Name',
-                        cotroler: phonecontroller,
+                        cotroler: nameController,
                         Validfunction: (value) {
                           if (value!.isEmpty || value.trim().isEmpty) {
                             return "name can't be empty";

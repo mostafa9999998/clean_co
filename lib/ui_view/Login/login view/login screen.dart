@@ -1,3 +1,4 @@
+import 'package:clean_co/ui_view/Login/forget_password/forget_password.dart';
 import 'package:clean_co/ui_view/Login/login%20Wedjets/login%20with%20container.dart';
 import 'package:clean_co/ui_view/Login/login%20Wedjets/textfield%20wedget.dart';
 import 'package:clean_co/ui_view/Login/login%20bloc/login_cubit.dart';
@@ -127,7 +128,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       children: [
                         InkWell(
                             onTap: () {
-
+                              Navigator.pushNamed(context, ForgetPassword.routeName);
                             },
                             child: Text('Forget password?   ',style: TextStyle(fontSize: 14),)),
                       ],
