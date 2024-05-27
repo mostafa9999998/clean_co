@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 import '../../../utils/shared_widget/defaultTextField.dart';
+import '../login Wedjets/textfield wedget.dart';
 
 class ForgetPassword extends StatelessWidget {
   static const String routeName='forget_password';
@@ -14,7 +15,7 @@ class ForgetPassword extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsetsDirectional.symmetric(horizontal: 20),
+        padding: EdgeInsetsDirectional.symmetric(horizontal: MediaQuery.of(context).size.width*.05),
         child: Center(
           child: SingleChildScrollView(
             child: Form(
@@ -33,39 +34,48 @@ class ForgetPassword extends StatelessWidget {
                         style:TextStyle(color: Colors.black,fontWeight: FontWeight.w400,fontSize: 18)),
                   ),
                   SizedBox(height: 15,),
-                  Container(
-                    height: 60,
-                    clipBehavior: Clip.antiAliasWithSaveLayer,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      border: Border.all(color: Colors.black)
-                    ),
-                    child: Row(
-                      children:
-                      [
-                        Text(' +974',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w300),),
-                        SizedBox(width: 5,),
-                        Image(image: AssetImage(AssetsData.dashImage)),
-                        SizedBox(width: 5,),
-                        Container(
-                          width: 210,
-                          height: 47,
-                          child: TextFormField(
-                            controller:phoneController ,
-                            keyboardType: TextInputType.phone,
-                            decoration: const InputDecoration(
-                              hintText: 'Enter Your Phone Number',
-                              hintStyle: TextStyle(color: Colors.grey,fontSize: 16,fontWeight: FontWeight.w300),
-                              border: InputBorder.none,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+
+                  TextFieldWedget(
+                      hint: '+974 | Enter Your Phone Number',
+                      cotroler: phoneController,
+                      Validfunction: (value) {
+                        if (value!.isEmpty || value.trim().isEmpty) {
+                          return "phone can't be empty";
+                        }
+                      }),
+                  // Container(
+                  //   height: 60,
+                  //   clipBehavior: Clip.antiAliasWithSaveLayer,
+                  //   decoration: BoxDecoration(
+                  //     borderRadius: BorderRadius.circular(12),
+                  //     border: Border.all(color: Colors.black)
+                  //   ),
+                  //   child: Row(
+                  //     children:
+                  //     [
+                  //       Text(' +974',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w300),),
+                  //       SizedBox(width: 5,),
+                  //       Image(image: AssetImage(AssetsData.dashImage)),
+                  //       SizedBox(width: 5,),
+                  //       Container(
+                  //         width: 210,
+                  //         height: 47,
+                  //         child: TextFormField(
+                  //           controller:phoneController ,
+                  //           keyboardType: TextInputType.phone,
+                  //           decoration: const InputDecoration(
+                  //             hintText: 'Enter Your Phone Number',
+                  //             hintStyle: TextStyle(color: Colors.grey,fontSize: 16,fontWeight: FontWeight.w300),
+                  //             border: InputBorder.none,
+                  //           ),
+                  //         ),
+                  //       ),
+                  //     ],
+                  //   ),
+                  // ),
                   SizedBox(height: 30,),
                   Padding(
-                    padding: EdgeInsetsDirectional.symmetric(horizontal: 40),
+                    padding: EdgeInsetsDirectional.symmetric(horizontal:MediaQuery.of(context).size.width*.03),
                     child: CustomButton(
                         backgroundColor: Colors.black,
                         text: 'Next',

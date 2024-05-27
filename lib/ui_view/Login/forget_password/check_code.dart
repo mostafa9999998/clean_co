@@ -18,7 +18,7 @@ class CheckCodeScreen extends StatelessWidget {
             children:
             [
               SizedBox(
-                height: MediaQuery.of(context).size.height*.07,
+                height: MediaQuery.of(context).size.height*.15,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -47,7 +47,7 @@ class CheckCodeScreen extends StatelessWidget {
                   ),
                 ],),
               SizedBox(
-                height: MediaQuery.of(context).size.height*.25,
+                height: MediaQuery.of(context).size.height*.13,
               ),
               Text(
                 'Hello, Mohamed !!',
@@ -73,10 +73,10 @@ class CheckCodeScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: MediaQuery.of(context).size.height*.02,
+                height: MediaQuery.of(context).size.height*.04,
               ),
               Padding(
-                padding: EdgeInsetsDirectional.symmetric(horizontal: 40),
+                padding: EdgeInsetsDirectional.symmetric(horizontal:MediaQuery.of(context).size.width*.03),
                 child: CustomButton(
                   backgroundColor: Colors.black,
                   text: 'Next',

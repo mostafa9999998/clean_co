@@ -82,10 +82,10 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
                     },
                     controller: _confirmPasswordController),
                 SizedBox(
-                  height: MediaQuery.of(context).size.height*.02,
+                  height: MediaQuery.of(context).size.height*.03,
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.symmetric(horizontal: 40),
+                  padding: EdgeInsetsDirectional.symmetric(horizontal:MediaQuery.of(context).size.width*.03),
                   child: CustomButton(
                     backgroundColor: Colors.black,
                     text: 'Next',
